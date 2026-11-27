@@ -199,6 +199,54 @@ body > h1 {
   outline-offset: 3px;
 }
 
+.unit-content {
+  max-width: 800px;
+  margin: 8px auto 48px;
+  padding-top: 28px;
+  border-top: 1px solid #e1e1e1;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.unit-content h3 {
+  margin: 0 0 8px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 22px;
+  color: #1a1a1a;
+}
+
+.unit-content h3 + p {
+  margin-bottom: 28px;
+}
+
+.unit-content p {
+  margin: 0 0 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #373636;
+}
+
+.unit-content a {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 2px solid #1a1a1a;
+  border-radius: 22px;
+  color: #1a1a1a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.unit-content a:hover {
+  background-color: #ffd923;
+  border-color: #ffd923;
+}
+
+.unit-content a:focus-visible {
+  outline: 3px solid #0b3d91;
+  outline-offset: 3px;
+}
+
 @media (max-width: 700px) {
   body {
     padding: 16px;
