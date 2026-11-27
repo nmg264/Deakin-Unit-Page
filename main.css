@@ -36,6 +36,21 @@ body {
   line-height: 1.6;
 }
 
+body > div {
+  margin: -24px -24px 0;
+  padding: 14px max(24px, calc((100% - 800px) / 2));
+  background-color: #0b3d91;
+  border-bottom: 5px solid #ffd923;
+  text-align: right;
+}
+
+body > div img {
+  display: inline-block;
+  width: 96px;
+  height: 96px;
+  vertical-align: middle;
+}
+
 body > h1 {
   max-width: 800px;
   margin: 24px auto 0;
@@ -187,6 +202,16 @@ body > h1 {
 @media (max-width: 700px) {
   body {
     padding: 16px;
+  }
+
+  body > div {
+    margin: -16px -16px 0;
+    padding: 10px 16px;
+  }
+
+  body > div img {
+    width: 72px;
+    height: 72px;
   }
 
   body > h1 {
