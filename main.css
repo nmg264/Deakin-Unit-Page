@@ -26,38 +26,57 @@ tr:nth-child(odd) {background-color: #f2f2f2;}
 body {
   margin: 0;
   padding: 24px;
-  background-color: #f3f6f7;
-  color: #1f2a30;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  background-color: #ffffff;
+  color: #373636;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body > h1 {
+  max-width: 800px;
+  margin: 24px auto 0;
+  color: #1a1a1a;
+  font-size: 34px;
+  line-height: 1.25;
 }
 
 .unit-details {
-  max-width: 960px;
-  margin: 24px auto;
-  padding: 32px;
-  background-color: #ffffff;
-  border-top: 6px solid #00666b;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(0, 54, 58, 0.10);
+  max-width: 800px;
+  margin: 32px auto;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.unit-details .eyebrow {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 14px;
+  border-radius: 22px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
 }
 
 .unit-details h2 {
-  margin: 0 0 6px;
-  color: #00494d;
+  margin: 0 0 8px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 28px;
+  color: #1a1a1a;
 }
 
 .unit-summary {
-  margin: 0 0 24px;
+  margin: 0 0 28px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
-  color: #4a5a62;
+  color: #555454;
 }
 
 .quick-facts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  margin: 0 0 28px;
+  margin: 0 0 32px;
   padding: 0;
   list-style: none;
 }
@@ -65,97 +84,109 @@ body {
 .quick-facts li {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   padding: 18px 20px;
-  background: linear-gradient(135deg, #00666b, #008a8f);
-  border-radius: 12px;
-  color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-top: 5px solid #ffd923;
+  border-radius: 8px;
+  background-color: #fafafa;
 }
 
 .fact-value {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.2;
+  color: #1a1a1a;
 }
 
 .fact-label {
   font-size: 14px;
-  opacity: 0.92;
+  color: #555454;
 }
 
 .unit-details table {
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid #d5dee2;
-  border-radius: 12px;
-  overflow: hidden;
+  border-collapse: collapse;
+  border-top: 2px solid #1a1a1a;
 }
 
 .unit-details caption {
-  padding: 0 0 12px;
+  padding: 0 0 10px;
   text-align: left;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
-  color: #4a5a62;
+  color: #1a1a1a;
+}
+
+.unit-details tr:nth-child(odd) {
+  background-color: transparent;
 }
 
 .unit-details td {
-  padding: 16px 20px;
+  padding: 16px;
+  font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   vertical-align: middle;
-  border-bottom: 1px solid #e3e9ec;
-}
-
-.unit-details tr:last-child td {
-  border-bottom: none;
+  border-bottom: 1px solid #e1e1e1;
 }
 
 .unit-details td:first-child {
-  width: 32%;
-  font-weight: bold;
-  color: #00494d;
-  background-color: #e6f2f2;
+  width: 33%;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
-.unit-details tr:nth-child(odd) td:last-child {
-  background-color: #f8fafb;
-}
-
-.unit-details tr:hover td:last-child {
-  background-color: #eef7f7;
+.unit-details tr:hover {
+  background-color: #fffbe6;
 }
 
 .mode-label {
   margin-right: 6px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .tag {
   display: inline-block;
   margin: 3px 4px 3px 0;
   padding: 3px 12px;
-  border-radius: 999px;
-  background-color: #e0f0f0;
-  color: #00494d;
+  border: 1px solid #e1e1e1;
+  border-radius: 22px;
+  background-color: #f5f5f5;
   font-size: 14px;
 }
 
 .tag-online {
-  background-color: #fff1d6;
-  color: #7a4a00;
+  border-color: #ffd923;
+  background-color: #fff6c2;
+}
+
+.unit-button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 12px 26px;
+  border-radius: 22px;
+  background-color: #ffd923;
+  color: #1a1a1a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.unit-button:hover {
+  background-color: #f2c900;
+}
+
+.unit-button:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 3px;
 }
 
 @media (max-width: 700px) {
   body {
-    padding: 12px;
+    padding: 16px;
   }
 
-  h1 {
-    font-size: 28px;
-  }
-
-  .unit-details {
-    padding: 20px;
+  body > h1 {
+    font-size: 26px;
   }
 
   .quick-facts {
@@ -169,10 +200,16 @@ body {
 
   .unit-details td:first-child {
     width: auto;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: none;
   }
 
   .unit-details td:last-child {
-    padding-top: 6px;
+    padding-top: 4px;
+  }
+
+  .unit-button {
+    display: block;
+    text-align: center;
   }
 }
