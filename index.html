@@ -4,7 +4,8 @@
 <title> Home </title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+<link rel="stylesheet" type="text/css" href="main.css"/>
+<script src="main.js" defer></script>
 </head>
 <body>
 <div>
@@ -12,6 +13,7 @@
 <a href="#unit-details-title">Unit details</a>
 <a href="#unit-content-title">Content</a>
 <a href="#hurdle-title">Hurdle requirement</a>
+<button class="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
 </nav>
 <img src="logo.svg" alt="Deakin" width="200" height="210">
 </div>
@@ -43,9 +45,15 @@
 <tr>
 <td>Enrolment modes:</td>
 <td>
-<span class="activity"><span class="mode-label">Trimester 1:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">Waurn Ponds (Geelong)</span><span class="tag tag-online">Online</span></span>
-<span class="activity"><span class="mode-label">Trimester 2:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">GIFT City Campus</span><span class="tag tag-online">Online</span></span>
-<span class="activity"><span class="mode-label">Trimester 3:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">Waurn Ponds (Geelong)</span><span class="tag tag-online">Online</span></span>
+<span class="trimester-picker" role="group" aria-label="Show enrolment modes for a trimester" hidden>
+<button type="button" data-value="all" aria-pressed="true">All</button>
+<button type="button" data-value="1" aria-pressed="false">Trimester 1</button>
+<button type="button" data-value="2" aria-pressed="false">Trimester 2</button>
+<button type="button" data-value="3" aria-pressed="false">Trimester 3</button>
+</span>
+<span class="activity" data-trimester="1"><span class="mode-label">Trimester 1:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">Waurn Ponds (Geelong)</span><span class="tag tag-online">Online</span></span>
+<span class="activity" data-trimester="2"><span class="mode-label">Trimester 2:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">GIFT City Campus</span><span class="tag tag-online">Online</span></span>
+<span class="activity" data-trimester="3"><span class="mode-label">Trimester 3:</span> <span class="tag">Burwood (Melbourne)</span><span class="tag">Waurn Ponds (Geelong)</span><span class="tag tag-online">Online</span></span>
 </td>
 </tr>
 <tr>
@@ -88,6 +96,9 @@
 <td>SIT223</td>
 </tr>
 </table>
+<p class="detail-actions">
+<button class="print-button" type="button">Print unit details</button>
+</p>
 </section>
 <section class="unit-content" aria-labelledby="unit-content-title">
 <h3 id="unit-content-title">Content</h3>
@@ -102,5 +113,6 @@ To be eligible to obtain a pass in this unit, students must meet certain milesto
 </p>
 <a href="https://www.deakin.edu.au/students/enrolment-and-fees/fees"> > Current students </a>
 </section>
+<button class="back-to-top" type="button" aria-label="Back to top">&uarr; Top</button>
 </body>
 </html>
